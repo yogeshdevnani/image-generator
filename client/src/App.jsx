@@ -13,8 +13,16 @@ const App = () => {
         <Link to="/">
           <img id="main-logo" src={logo} alt="logo" />
         </Link>
-        <Link to="/createpost"></Link>
+        <Link to="/create-post">
+          <input id="create-post" type="button" value="Create Post" />
+        </Link>
       </header>
+      <main className="main-body">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/create-post" element={<CreatePost />} />
+        </Routes>
+      </main>
     </BrowserRouter>
   );
 };
